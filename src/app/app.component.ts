@@ -82,7 +82,7 @@ export class AppComponent {
   }
 
   longestIncreasingSubsequence() {
-    return this._longestIncreasingSubsequenceService.longestIncreasingSubsequence([7, 1, 2, 3, 1, 2, 5, 8, 9, 6])
+    return this._longestIncreasingSubsequenceService.longestIncreasingSubsequence([7, 1, 2, 3, 2, 2, 5, 8, 9, 6])
   }
 
   longestCommonSubstring() {
