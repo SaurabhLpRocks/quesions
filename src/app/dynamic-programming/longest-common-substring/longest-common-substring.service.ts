@@ -45,19 +45,24 @@ export class LongestCommonSubstringService {
 
     // To store length of the longest
     // common substring
-    var result = 0;
+
+    // var result = 0;
+    var result = '';
 
     // Following steps build
     // LCSuff[m+1][n+1] in bottom up fashion
-    for (let y = 0; y <= len1; y++) {
-      for (let x = 0; x <= len2; x++) {
-        if (y == 0 || x == 0)
-          LCStuff[y][x] = 0;
-        else if (str1[y - 1] == str2[x - 1]) {
-          LCStuff[y][x] = LCStuff[y - 1][x - 1] + 1;
-          result = Math.max(result, LCStuff[y][x]);
+    for (let x = 0; x <= len1; x++) {
+      for (let y = 0; y <= len2; y++) {
+        if (x == 0 || y == 0)
+          LCStuff[x][y] = 0;
+        else if (str1[x - 1] == str2[y - 1]) {
+          // LCStuff[x][y] = LCStuff[x - 1][y - 1] + 1;
+          const prev = LCStuff[x - 1][y - 1] === 0 ? '' : LCStuff[x - 1][y - 1];
+          LCStuff[x][y] = prev + str1[x - 1];
+          // result = Math.max(result, LCStuff[x][y]);
+          result = LCStuff[x][y].length > result.length ? LCStuff[x][y] : result;
         } else
-          LCStuff[y][x] = 0;
+          LCStuff[x][y] = 0;
       }
     }
     return result;

@@ -34,7 +34,7 @@ export class AppComponent {
     private _longestCommonSubstringService: LongestCommonSubstringService,
     private _longestSubStringService: LongestSubStringService,
   ) {
-    const result = this.longestIncreasingSubsequence();
+    const result = this.longestCommonSubstring();
     console.log(
       '🚀 ~ file: app.component.ts ~ line 24 ~ AppComponent ~ result',
       result
