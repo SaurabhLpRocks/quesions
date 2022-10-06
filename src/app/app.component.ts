@@ -7,6 +7,7 @@ import {
 import {
   CountUniqueArrayItemsService,
   FindPairOf2ArrayItemsThatSumsToGivenNumberService,
+  ReverseStringCharsExceptSpecialCharsService,
 } from './multiple-pointers';
 import { MaxSubArraySumService } from './sliding-window';
 import { LongestIncreasingSubsequenceService } from './dynamic-programming/longest-increasing-subsequence';
@@ -33,8 +34,9 @@ export class AppComponent {
     private _longestIncreasingSubsequenceService: LongestIncreasingSubsequenceService,
     private _longestCommonSubstringService: LongestCommonSubstringService,
     private _longestSubStringService: LongestSubStringService,
+    private _reverseStringCharsExceptSpecialCharsService: ReverseStringCharsExceptSpecialCharsService
   ) {
-    const result = this.longestCommonSubstring();
+    const result = this.reverseStringCharsExceptSpecialCharsService();
     console.log(
       '🚀 ~ file: app.component.ts ~ line 24 ~ AppComponent ~ result',
       result
@@ -93,5 +95,9 @@ export class AppComponent {
 
   longestSubStringService() {
     return this._longestSubStringService.longestSubStringLength('babb');
+  }
+
+  reverseStringCharsExceptSpecialCharsService() {
+    return this._reverseStringCharsExceptSpecialCharsService.reverseString('Ab,c,de!$');
   }
 }
