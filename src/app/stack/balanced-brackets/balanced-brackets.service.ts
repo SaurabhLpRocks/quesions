@@ -30,6 +30,12 @@ export class BalancedBracketsService {
         continue;
       }
 
+      // // If current character is not opening
+      // // bracket, then it must be closing.
+      // // So stack cannot be empty at this point.
+      // if (stack.length == 0)
+      //   return false;
+
       let check;
       switch (x) {
         case ')':
