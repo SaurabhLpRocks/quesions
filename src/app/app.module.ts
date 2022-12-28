@@ -8,7 +8,7 @@ import {
 } from './frequency-counter';
 
 @NgModule({
-  declarations: [AppComponent,],
+  declarations: [AppComponent],
   imports: [BrowserModule],
   providers: [
     Is2ndArrayHasItemsSquare1stArrayItemsService,

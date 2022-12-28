@@ -11,7 +11,7 @@ import {
 } from './multiple-pointers';
 import { MaxSubArraySumService } from './sliding-window';
 import { LongestIncreasingSubsequenceService } from './dynamic-programming/longest-increasing-subsequence';
-import { LongestCommonSubstringService } from './dynamic-programming';
+import { BalancedArrayService, LongestCommonSubstringService, LongestPalindromeSubstringService } from './dynamic-programming';
 import { LongestSubStringService } from './sliding-window/longest-sub-string';
 
 @Component({
@@ -34,9 +34,11 @@ export class AppComponent {
     private _longestIncreasingSubsequenceService: LongestIncreasingSubsequenceService,
     private _longestCommonSubstringService: LongestCommonSubstringService,
     private _longestSubStringService: LongestSubStringService,
-    private _reverseStringCharsExceptSpecialCharsService: ReverseStringCharsExceptSpecialCharsService
+    private _reverseStringCharsExceptSpecialCharsService: ReverseStringCharsExceptSpecialCharsService,
+    private _longestPalindromeSubstringService: LongestPalindromeSubstringService,
+    private _balancedArrayService: BalancedArrayService,
   ) {
-    const result = this.reverseStringCharsExceptSpecialCharsService();
+    const result = this.balancedArray();
     console.log(
       '🚀 ~ file: app.component.ts ~ line 24 ~ AppComponent ~ result',
       result
@@ -99,5 +101,13 @@ export class AppComponent {
 
   reverseStringCharsExceptSpecialCharsService() {
     return this._reverseStringCharsExceptSpecialCharsService.reverseString('Ab,c,de!$');
+  }
+
+  longestPalindromeSubstring() {
+    return this._longestPalindromeSubstringService.longestPalSubstr('21544511');
+  }
+
+  balancedArray() {
+    return this._balancedArrayService.balancedArray([3, 1, 2, 1])
   }
 }

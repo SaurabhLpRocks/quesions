@@ -53,7 +53,7 @@ export class LongestCommonSubstringService {
     // LCSuff[m+1][n+1] in bottom up fashion
     for (let x = 0; x <= len1; x++) {
       for (let y = 0; y <= len2; y++) {
-        if (x == 0 || y == 0)
+        if (x === 0 || y === 0)
           LCStuff[x][y] = 0;
         else if (str1[x - 1] == str2[y - 1]) {
           // LCStuff[x][y] = LCStuff[x - 1][y - 1] + 1;

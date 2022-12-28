@@ -22,7 +22,7 @@ export class LongestIncreasingSubsequenceService {
   longestIncreasingSubsequence(lookupArray: number[]) {
     const lookupArraySize = lookupArray.length;
 
-    // We use this array to store count of sequence possible for each index
+    // We use this array to store count of sequence possible till that each index
     // If lookupArray = [7, 1, 2, 3, 1, 2, 5, 8, 9, 6]
     // So for above lookupArray,
     // seqCountForIndx[5] = 2
